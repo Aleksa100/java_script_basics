@@ -1,22 +1,19 @@
-let hobys = ["Kosarka", "Fucal", "Nigeri"];
-let gritingText = "I am Aleksa";
-let myAge = 38;
-let job = {
-  work: "niga",
-  salerz: 500,
-  place: "Pogorica",
-};
-console.log(gritingText);
+let paragrafOne = document.querySelector("p");
 
-let adultYears;
-
-function calculateAdultYears(userAge) {
-  return userAge - 18;
+function changeParagrafOne() {
+  paragrafOne.textContent = "Clicked";
 }
 
-adultYears = calculateAdultYears(myAge);
-console.log(adultYears);
+paragrafOne.addEventListener("click", changeParagrafOne);
 
-myAge = 40;
-adultYears = calculateAdultYears(myAge);
-console.log(adultYears);
+let inputOne = document.querySelector("input");
+
+function inputValu(event) {
+  // let enterdText = inputOne.value;
+  let enterdText = event.target.value;
+  console.log(enterdText);
+  console.log(event);
+}
+
+inputOne.addEventListener("input", inputValu);
+console.log(inputOne.addEventListener);
