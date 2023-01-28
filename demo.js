@@ -25,6 +25,19 @@ function updateRemainingCharacters(event) {
   const remainingCharacters = maxAllowedChars - enteredTextLength;
 
   remainingCharsElement.textContent = remainingCharacters;
+
+  if (remainingCharacters == 0) {
+    remainingCharsElement.classList.add("eroer");
+    productNameInputElement.classList.add("eroer");
+  } else if (remainingCharacters <= 10) {
+    remainingCharsElement.classList.add("warning");
+    productNameInputElement.classList.add("warning");
+    remainingCharsElement.classList.remove("eroer");
+    productNameInputElement.classList.remove("eroer");
+  } else {
+    remainingCharsElement.classList.remove("warning");
+    productNameInputElement.classList.remove("warning");
+  }
 }
 
 productNameInputElement.addEventListener("input", updateRemainingCharacters);

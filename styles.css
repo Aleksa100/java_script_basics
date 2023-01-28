@@ -66,3 +66,11 @@ input.warning {
 #remaining-chars.warning {
   color: rgb(211, 109, 26);
 }
+
+input.eroer {
+  background-color: rgb(248, 167, 145);
+}
+
+#remaining-chars.eroer {
+  color: rgb(211, 26, 26);
+}
